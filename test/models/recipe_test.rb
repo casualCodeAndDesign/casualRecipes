@@ -12,7 +12,7 @@ class RecipeTest < ActiveSupport::TestCase
   
   test "Chef_id should be present" do
     @recipe.chef_id = nil
-    puts "Recipe Chef_id is present" if assert_not @recipe.valid?
+    puts "Recipe gitChef_id is present" if assert_not @recipe.valid?
   end
   
   test "name should be present" do
