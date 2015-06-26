@@ -5,7 +5,8 @@
   <div class="row">
     <div class="col-md-2">
       <section class="chef_info center">
-        
+        <%= gravatar_for r.chef, size: 100 %>
+        <h5>Chef name: <%= r.chef.chefname.capitalize %></h5>
       </section>
     </div>
     <div class="col-lg-8 well">
@@ -16,4 +17,5 @@
       </p>
     </div>
   </div>
+  <hr>
 <% end %>
