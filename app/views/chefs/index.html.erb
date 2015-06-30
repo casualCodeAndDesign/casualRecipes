@@ -10,6 +10,7 @@
       <section class="chef_info center">
         <%= link_to gravatar_for(chef, size: 100), chef_path(chef) %>
         <h5>Chef name: <%= link_to chef.chefname.capitalize, chef_path(chef) %></h5>
+        <h5><small>Last seen: <%= chef.last_login == nil ? 'Never' : "#{time_ago_in_words(chef.last_login)}" %></small></h5>
       </section>
     </div>
   </div>
