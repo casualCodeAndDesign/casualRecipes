@@ -2,13 +2,19 @@
   <div class="container">
     <%= link_to "myRecipes", root_path, class: "btn btn-lg btn-success", id: "logo" %>
     <div class="nav_item">
-      <%= link_to "Recipes", recipes_path, class: "btn bn-default btn-warning" %>
+      <%= link_to "Recipes", recipes_path, class: "btn btn-default btn-warning" %>
     </div>
+    <% if logged_in? %>
+      <div class="nav_item">
+          <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-warning" if logged_in? %>
+        </div>
+    <% end %>
     <div class="nav_item">
-      <%= link_to "link 2", "", class: "btn bn-default btn-warning" %>
-    </div>
-    <div class="nav_item">
-      <%= link_to "New Recipe", new_recipe_path, class: "btn bn-default btn-warning" %>
+      <% if logged_in? %>
+        <%= link_to "Logout", logout_path, class: "btn btn-default btn-warning" %>
+      <% else %>
+        <%= link_to "Login", login_path, class: "btn btn-default btn-warning" %>
+      <% end %>
     </div>
   </div>
 </header>
