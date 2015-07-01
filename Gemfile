@@ -15,11 +15,11 @@ gem 'mini_magick'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'bcrypt', '~> 3.1.7'
-  gem 'fog', '1.23.0'  
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'fog'
 end
 
 group :development, :test do
