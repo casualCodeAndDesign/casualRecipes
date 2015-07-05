@@ -1,6 +1,10 @@
 class LoginsController < ApplicationController
   
   def new
+    if logged_in?
+      flash[:danger] = "You are already logged in"
+      redirect_to recipes_path
+    end
   end
   
   def create
